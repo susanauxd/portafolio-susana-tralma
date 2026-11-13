@@ -1,0 +1,71 @@
+.portfolio-interior {
+  --type-family: 'Spline Sans Mono', monospace;
+  --lights: radial-gradient(ellipse at 22% 60%, rgb(164 233 235 / 20%), transparent 54%),
+    radial-gradient(ellipse at 82% 32%, rgb(187 174 245 / 28%), transparent 55%), #101115;
+}
+.portfolio-interior header.portfolio-nav:not(.has-scroll) { color: white; }
+.portfolio-interior main .hero,
+.portfolio-interior main #herramientas,
+.portfolio-interior main .section:has(.project-filters) {
+  background: var(--lights);
+  color: #f6f5fb;
+}
+.portfolio-interior .hero :is(h1,.eyebrow,.sub),
+.portfolio-interior #herramientas :is(h2,h3,p,.number),
+.portfolio-interior .cards .card :is(h3,p,.meta,.case-link,.arrow),
+.portfolio-interior :is(.filter-status,.note) { color: inherit; }
+.portfolio-interior .hero .blue { color: #d7caff; }
+.portfolio-interior .section.about-biography { background: #f5f2fa; }
+.portfolio-interior #herramientas .capability-row,
+.portfolio-interior .cards .card { padding: clamp(16px, 2.3vw, 32px); border: 0; border-radius: var(--panel-radius); }
+.portfolio-interior #herramientas .capability-row + .capability-row { margin-top: 12px; }
+.portfolio-interior :is(.case-link,.project-filters a,.service-contact) { font-family: var(--type-family); }
+.portfolio-interior .project-filters a[data-filter] { background: transparent; color: #fff; border-color: #b7b3c7; }
+.portfolio-interior .project-filters a[data-filter][aria-current=true] { background: #f1edf9; color: #241b34; }
+.portfolio-interior .project-filters a[data-filter]:hover { color: #21182e; background: #dfd6f3; }
+.portfolio-interior .cards .card:focus-visible,
+.portfolio-interior .project-filters a[data-filter]:focus-visible { outline: 3px solid #d4c4ff; outline-offset: 3px; }
+
+/* About: aligned editorial columns, with Spanish hyphenation for justified copy. */
+.portfolio-interior .about-biography .biography-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+.portfolio-interior .biography-intro > h2 { margin: 0; text-wrap: balance; }
+.portfolio-interior .biography-intro .biography-copy { max-width: none; margin: 0; min-width: 0; }
+.portfolio-interior .biography-copy p,
+.portfolio-interior #servicios .capability-row p {
+  text-align: justify;
+  text-align-last: start;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+  orphans: 3;
+  widows: 3;
+}
+.portfolio-interior .biography-copy p:first-child { margin-top: 0; }
+.portfolio-interior .biography-copy p:last-child { margin-bottom: 0; }
+.portfolio-interior #herramientas .capability-row {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  align-items: start;
+}
+.portfolio-interior #herramientas .capability-row p { grid-column: auto; text-wrap: pretty; }
+.portfolio-interior .capability-row h3 { text-wrap: balance; }
+@media (max-width: 800px) {
+  .portfolio-interior .about-biography .biography-intro,
+  .portfolio-interior #herramientas .capability-row { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-interior #herramientas .capability-row { gap: 12px; }
+}
+
+.portfolio-interior .about-biography .biography-intro {grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;}
+.portfolio-interior .biography-intro .biography-copy h2 {margin:0 0 28px;text-wrap:balance;}
+.bio-concept-image {display:block;width:100%;height:auto;border-radius:16px;}
+.bio-highlight {color:inherit;background:linear-gradient(#cfbff0,#cfbff0) no-repeat left center / 0% 100%;padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.bio-highlights-running .bio-highlight {animation:bio-mark 650ms ease-out both;animation-delay:calc(var(--step)*750ms);}
+@keyframes bio-mark {from {background-size:0% 100%}to {background-size:100% 100%}}
+@media(max-width:800px){.portfolio-interior .about-biography .biography-intro {grid-template-columns:minmax(0,1fr);}}
+@media(prefers-reduced-motion:reduce){.bio-highlight {background-size:100% 100%;}.bio-highlights-running .bio-highlight {animation:none;}}

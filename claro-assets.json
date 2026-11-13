@@ -1,0 +1,104 @@
+{
+  "claro-hero": [
+    1012,
+    124,
+    1738,
+    636
+  ],
+  "claro-heuristics": [
+    865,
+    1275,
+    1744,
+    2110
+  ],
+  "claro-map": [
+    1032,
+    2324,
+    1687,
+    3198
+  ],
+  "claro-tests": [
+    676,
+    3476,
+    1750,
+    4239
+  ],
+  "claro-lean": [
+    728,
+    4594,
+    1750,
+    5179
+  ],
+  "claro-type": [
+    172,
+    6790,
+    805,
+    7235
+  ],
+  "claro-color": [
+    975,
+    6790,
+    1810,
+    7235
+  ],
+  "claro-home-before": [
+    172,
+    7927,
+    468,
+    9571
+  ],
+  "claro-home-after": [
+    476,
+    7927,
+    771,
+    9225
+  ],
+  "claro-benefits-before": [
+    1060,
+    7927,
+    1355,
+    8563
+  ],
+  "claro-benefits-after": [
+    1363,
+    7927,
+    1658,
+    8702
+  ],
+  "claro-coupon-before": [
+    188,
+    10019,
+    786,
+    10753
+  ],
+  "claro-coupon-after": [
+    1072,
+    10019,
+    1670,
+    11025
+  ],
+  "claro-purchase-before": [
+    172,
+    11468,
+    4390,
+    14800
+  ],
+  "claro-purchase-after": [
+    172,
+    15344,
+    2600,
+    17530
+  ],
+  "claro-benefits-flow-before": [
+    172,
+    18050,
+    2720,
+    20950
+  ],
+  "claro-benefits-flow-after": [
+    172,
+    21460,
+    2668,
+    22930
+  ]
+}

@@ -1,0 +1,87 @@
+@font-face{font-family:'Spline Sans Mono';src:url('assets/fonts/spline-sans-mono.ttf') format('truetype');font-weight:300 700;font-display:swap}
+header.portfolio-nav{--nav-glass:rgb(255 255 255 / 50%);position:fixed;inset:0 0 auto;z-index:40;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+header.portfolio-nav.has-scroll{background:var(--nav-glass);backdrop-filter:blur(14px);color:#15151c;box-shadow:0 1px 0 #24232f1c}
+body:not(.portfolio-home)>main>.hero:first-child{border-top:66px solid transparent;background-clip:border-box}
+.portfolio-nav .navigation{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1440px,calc(100% - clamp(20px,4vw,64px)*2));margin:auto}
+.portfolio-nav :is(a,summary,button,span,strong,small){font-family:'Spline Sans Mono',monospace}
+.portfolio-nav .brand{font-size:16px;font-weight:700;letter-spacing:.12em;color:inherit;text-decoration:none}
+.portfolio-nav .brand span{color:#7259bc}
+.portfolio-nav #main-nav{display:flex;align-items:center;gap:26px}
+.portfolio-nav #main-nav>a,.portfolio-nav summary{font-size:14px;color:inherit;text-decoration:none}
+.portfolio-nav .case-menu{position:relative}
+.portfolio-nav .case-menu summary{list-style:none;display:flex;gap:.6em;align-items:center;min-height:44px;cursor:pointer}
+.portfolio-nav summary::-webkit-details-marker{display:none}
+.portfolio-nav summary::after{content:'';width:6px;height:6px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+.portfolio-nav details[open]>summary::after{transform:rotate(225deg)}
+.portfolio-nav .case-menu .case-index{background:var(--menu-paper);width:min(450px,calc(100vw - 32px));right:-5rem}
+.portfolio-nav #main-nav .case-index li a{grid-template-columns:1.3em minmax(0,1fr) auto;gap:9px;align-items:baseline}
+.portfolio-nav .discipline-badge{white-space:nowrap;font-size:10px;line-height:1.5;padding:3px 8px;border-radius:99px;color:#483576;background:#eee9f7}
+.portfolio-nav .menu-toggle{display:none}
+@media(max-width:800px){
+ .portfolio-nav .menu-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+ .portfolio-nav #main-nav{display:none;position:absolute;inset:66px 0 auto;align-items:stretch;gap:0;padding:12px 20px;background:var(--menu-paper);color:#f6f5fa;border-bottom:1px solid #dad7df}
+ .portfolio-nav #main-nav.open{display:flex;flex-direction:column}
+ .portfolio-nav #main-nav>a{padding:12px 0}
+ .portfolio-nav .case-menu .case-index{width:100%;max-height:48dvh}
+ .portfolio-nav .brand{font-size:14px;letter-spacing:.09em}
+}
+
+.portfolio-footer,.portfolio-footer :is(strong,p,a){font-family:'Spline Sans Mono',monospace}
+
+:root { --site-image-radius: 24px; }
+body img,
+body .image-surface,
+body .image-surface.photo-edge img,
+body .card .photo {
+  border-radius: var(--site-image-radius) !important;
+}
+
+main .project-directory {
+  background: transparent;
+  padding: 14px max(clamp(20px, 4vw, 64px), calc((100% - 1440px) / 2));
+}
+main .project-directory .textlink {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  min-height: 44px;
+  color: #101115;
+  font: 500 1rem/1.4 'Spline Sans Mono', monospace;
+  text-decoration: underline;
+  text-underline-offset: .27em;
+}
+
+main :is(img, figure, .image-surface, .photo, .case-image-open, .claro-image-link, .essana-artwork) {
+  background: transparent !important;
+}
+
+.portfolio-nav {
+  --menu-paper: radial-gradient(ellipse at 94% 5%, #322a48, transparent 65%),
+    radial-gradient(ellipse at 0% 100%, #213238, transparent 62%), #14151a;
+}
+.portfolio-nav #main-nav .case-index {
+  color: #f6f5fa;
+  border: 1px solid #646072;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 20%);
+}
+.portfolio-nav #main-nav .case-index li + li { border-color: #45424d; }
+.portfolio-nav #main-nav .case-index li a { color: #f6f5fa; }
+.portfolio-nav #main-nav .case-index li a:is(:hover,:focus-visible,[aria-current=page]) {
+  color: white;
+  background: rgb(255 255 255 / 14%);
+}
+.portfolio-nav #main-nav .case-index li a:focus-visible { outline: 2px solid #d7caff; }
+.portfolio-nav #main-nav .case-number { color: #c9bfff; }
+.portfolio-nav #main-nav .case-copy small { color: #d9d8e2; }
+.portfolio-nav .case-menu summary::after { width: .45em; height: .45em; flex: none; }
+main img, main video { max-inline-size: 100%; }
+@media (max-width: 800px) {
+  .portfolio-nav #main-nav.open { color: #f6f5fa; max-height: calc(100dvh - 66px); overflow-y: auto; }
+  .portfolio-nav #main-nav .case-index { position: static; max-height: none; }
+  .portfolio-nav #main-nav > a:focus-visible, .portfolio-nav #main-nav summary:focus-visible { outline-color: #d7caff; }
+}
+@media (max-width: 420px) {
+  .portfolio-nav #main-nav .case-index li a { grid-template-columns: 1.3em minmax(0,1fr); }
+  .portfolio-nav .discipline-badge { grid-column: 2; justify-self: start; }
+}

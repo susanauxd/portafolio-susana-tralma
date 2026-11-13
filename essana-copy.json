@@ -1,0 +1,111 @@
+{
+  "copy": [
+    "2025",
+    "Diseño\nManual de Marca e \nidentidad Corporativa",
+    "Proyecto académico: Clínica Essana es una clinica especialista en tratamientos \nmetabólicos femeninos.\nPara su construcción se realizó la creación de branding e identidad visual.",
+    "ROL",
+    "Diseñadora Gráfica",
+    "Herramientas",
+    "Figma, Illustrator, Photoshop",
+    "Formato",
+    "210 x 297 mm"
+  ],
+  "groups": [
+    [
+      "introduccion",
+      "Introducción",
+      [
+        8,
+        16,
+        12,
+        56
+      ],
+      [
+        "Manual de marca",
+        "ÍNDICE",
+        "Introducción",
+        "Essana forma parte del holding Lumena"
+      ]
+    ],
+    [
+      "historia",
+      "Historia",
+      [
+        114,
+        110,
+        118,
+        106
+      ],
+      [
+        "Historia",
+        "Uso correcto",
+        "Historia",
+        "Símbolo & Favicon"
+      ]
+    ],
+    [
+      "tipografia",
+      "Tipografía",
+      [
+        72,
+        64,
+        68,
+        60
+      ],
+      [
+        "Tipografía",
+        "Tipografía primaria Inter",
+        "Paleta de color",
+        "Valores de la paleta de color"
+      ]
+    ],
+    [
+      "comunicacion",
+      "Comunicación",
+      [
+        100,
+        92,
+        96,
+        88
+      ],
+      [
+        "Comunicación",
+        "Aplicación mobile",
+        "Página web",
+        "Página web"
+      ]
+    ],
+    [
+      "papeleria",
+      "Papelería Corporativa",
+      [
+        50,
+        42,
+        46,
+        38
+      ],
+      [
+        "Papelería Corporativa",
+        "Papelería Corporativa",
+        "Email Marketing",
+        "Email Marketing"
+      ]
+    ],
+    [
+      "publicidad",
+      "Afiche Corporativo R.S.E.",
+      [
+        32,
+        24,
+        28,
+        20
+      ],
+      [
+        "Afiche Corporativo R.S.E.",
+        "Afiche Corporativo R.S.E.",
+        "Publicidad exterior",
+        "Publicidad exterior"
+      ]
+    ]
+  ]
+}

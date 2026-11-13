@@ -1,0 +1,84 @@
+/* Chromatic editorial direction, inspired by the supplied cyan / blue / blush poster. */
+:root{--ink:#101114;--muted:#45474c;--blue:#101114;--paper:#f0f1f2;--cyan:#31d8ee;--electric:#497cff;--blush:#f9e6f4;--line:#c9cdd2}
+body{background:var(--paper);color:var(--ink)}
+header{background:#f4f5f6ed;border-bottom:1px solid #10111412;backdrop-filter:blur(20px)}
+header.scrolled{box-shadow:0 4px 20px #1733470a}
+.brand{letter-spacing:-.055em}.navlinks>a.active:after,.project-nav>a.active:after{background:#101114;height:2px}
+.hero{position:relative;isolation:isolate;background:radial-gradient(ellipse at 93% 22%,#c0f5fc 0,transparent 42%),radial-gradient(ellipse at 75% 100%,#e2e8ff 0,transparent 50%),#f0f1f2}
+.hero>.wrap{position:relative;z-index:2}
+.original-home{overflow:hidden;padding-top:80px;padding-bottom:32px;min-height:670px;background:#edefef}
+.original-home::before{content:'';position:absolute;z-index:0;inset:-12%;pointer-events:none;background:radial-gradient(ellipse 30% 40% at 79% 42%,#fff 12%,#fbe9f6d9 44%,transparent 76%),radial-gradient(ellipse 33% 24% at 77% 77%,#567bffdc 0%,#5795f4a6 45%,transparent 80%),radial-gradient(ellipse 24% 58% at 47% 39%,#00d4f5e8 0%,#51e2efd4 35%,transparent 80%),radial-gradient(ellipse 35% 30% at 68% 8%,#bdf8fa 5%,transparent 80%);filter:blur(28px)}
+.original-home::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.075;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23888' filter='url(%23n)' opacity='.7' d='M0 0h180v180H0z'/%3E%3C/svg%3E");background-size:180px 180px}
+.creative-hero{display:flex;flex-direction:column;align-items:stretch;gap:24px;min-height:558px;justify-content:space-between}
+.creative-copy{max-width:940px}
+.original-home .eyebrow{font-size:15px;letter-spacing:-.02em;margin-bottom:48px}
+.original-home h1{font-size:clamp(48px,6.1vw,84px);line-height:1.01;letter-spacing:-.065em;max-width:19ch;margin:0;font-weight:800;color:#08090b}
+.original-home .sub{font-size:17px;line-height:1.6;max-width:60ch;margin-top:32px;color:#202329}
+.original-home .actions{margin-top:32px}
+.graphic-study{display:none}
+.creative-art{align-self:flex-end;width:auto;min-width:0}
+.motion-toggle{margin:0;font-size:12px;color:#252a34;min-height:44px;padding:8px 12px;background:#f7f8fa8c;border:1px solid #10111420;text-decoration:none;backdrop-filter:blur(12px)}
+.motion-toggle:hover{background:#fff}
+.btn{background:#101114;color:#fff;border-color:#101114}
+.btn:hover{background:#252d3d;border-color:#252d3d}
+.section:not(.gray){background:#fff}.section.gray{background:#eceff2}
+.card .meta{color:#45474c;font-size:13px;letter-spacing:0}
+.card h3{letter-spacing:-.045em}.card .case-link{border-color:#bfc6d0}
+.card:hover .case-link{border-color:#162b53}
+.project-filters a{border-color:#8f99a5;background:transparent}
+.project-filters a[aria-current="true"]{background:#101114;color:#fff;border-color:#101114;box-shadow:inset 0 -3px #56dced}
+.project-filters a:not([aria-current="true"]):hover{background:#e1f5f8;border-color:#515a67}
+.project-submenu{background:#f8fafbef;border-color:#d0d8df;backdrop-filter:blur(16px);box-shadow:0 12px 30px #0b244512}
+.navlinks .project-submenu a:hover,.navlinks .project-submenu a:focus-visible{background:#e4f5f8}
+.story-index{background:transparent}.story-index a[aria-current="location"]{text-decoration-color:#12545f}
+.footcta{position:relative;isolation:isolate;background:radial-gradient(ellipse at 93% 85%,#cbd5ff 0,transparent 44%),radial-gradient(ellipse at 66% 12%,#cff8fb 0,transparent 45%),#f0f1f2;border-top:0}
+.footcta h2{letter-spacing:-.055em}.footcta .wrap:after{display:none}
+footer{background:#edf0f2;border-color:#cbd1d7}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#101114}
+@media(max-width:1000px){.original-home{min-height:620px;padding-top:64px}.creative-hero{min-height:520px}.original-home h1{font-size:clamp(48px,7vw,72px)}}
+@media(max-width:800px){
+ .original-home{padding-top:48px;padding-bottom:24px;min-height:0}.creative-hero{min-height:0;gap:32px;display:flex}
+ .original-home .eyebrow{margin-bottom:32px}.original-home h1{font-size:clamp(42px,8vw,60px);max-width:19ch;line-height:1.04;letter-spacing:-.055em}
+ .original-home .sub{font-size:16px;margin-top:24px}.original-home .actions{margin-top:24px}
+ .creative-art{width:auto;align-self:flex-end}.original-home::before{inset:-8%;filter:blur(24px);opacity:.8}
+ .navlinks{background:#f4f6f8}.project-submenu{background:transparent;box-shadow:none;backdrop-filter:none}
+}
+
+
+/* Biography: a readable narrative column and a reserved portrait rectangle. */
+.biography-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(240px,1fr);gap:64px;align-items:start}
+.biography-copy{max-width:68ch}.biography-copy p{font-size:17px;line-height:1.8}.biography-copy p+p{margin-top:28px}
+.biography-image-space{width:100%;aspect-ratio:4/5;background:#e8ecef;display:flex;align-items:center;justify-content:center;border-radius:0;color:#50575e;font-size:14px}
+@media(max-width:800px){.biography-grid{grid-template-columns:1fr;gap:40px}.biography-copy p{font-size:16px}.biography-image-space{max-width:400px}}
+
+/* Claro prototype: native controls and full uncropped recording. */
+.claro-prototype-video{display:block;width:100%;height:auto;aspect-ratio:1184/1848;border:0;border-radius:0;background:transparent}
+
+.essana-project-video{display:block;width:100%;height:auto;border:0;border-radius:0;background:transparent}
+
+/* Editorial refinement: restrained hierarchy, air and precise interaction cues. */
+@media(min-width:1001px){:root{--section-space:88px;--column-gap:56px}.cards{column-gap:40px;row-gap:64px}}
+.nav{height:80px}.brand{font-weight:700;letter-spacing:-.035em}
+.navlinks{gap:28px}.navlinks>a,.project-nav>a{font-size:13px;letter-spacing:.015em}
+.eyebrow,.card .meta,.facts dt{font-size:12px;line-height:1.5;letter-spacing:.065em;text-transform:uppercase}
+.original-home h1{font-weight:700;letter-spacing:-.055em;line-height:1.04}
+.original-home .eyebrow{letter-spacing:.065em;font-size:12px}
+.original-home .sub{max-width:50ch;font-size:17px}
+.section>.wrap>h2{font-size:clamp(32px,3.5vw,46px);font-weight:600;line-height:1.14;letter-spacing:-.045em}
+.story-section h2{font-weight:600;letter-spacing:-.04em}
+.card h3{font-size:28px;font-weight:600;letter-spacing:-.04em;margin-top:10px}
+.card .meta{margin-top:20px}.card p{margin-top:12px;color:var(--muted)}
+.card .case-link{padding-top:16px;border-top:1px solid var(--line);font-size:13px;letter-spacing:.015em}
+.textlink{text-underline-offset:6px;text-decoration-thickness:1px}
+.btn{min-height:48px;padding:14px 24px;font-size:14px;font-weight:500}
+.facts{border-top:1px solid var(--line)}
+.story-index{border-bottom:1px solid var(--line)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .card .arrow{display:inline-block;transition:transform .2s ease}
+ .card:hover .arrow,.card:focus-visible .arrow{transform:translate(3px,-3px)}
+ .textlink{transition:text-decoration-color .18s ease}
+ .textlink:hover{text-decoration-color:#1c6876}
+}
+@media(max-width:800px){.nav{height:72px}.navlinks{gap:12px}.card h3{font-size:26px}.cards{row-gap:44px}.original-home .sub{font-size:16px}.section>.wrap>h2{font-size:32px}}
+
+.biography-lifestyle{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}.biography-lifestyle h2{font-size:32px;line-height:1.15;margin-bottom:20px;letter-spacing:-.04em}
